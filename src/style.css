@@ -57,7 +57,7 @@ button {
 .main {
     /* make the main content take all the space available */
     flex-grow: 1; 
-    background-color: antiquewhite;
+
     width: 100vw;
 }
 
