@@ -5,16 +5,9 @@
 }
 
 :root {
-    --dirty-white:#FFFAFA;
+    --dirty-white:#f1f0f0;
     --black-gradient: rgba(0, 0, 0, 0.6);
-}
-
-
-h1 {
-    font-family: 'Bitter', serif;
-    font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 4rem;
-    color: rgb(253, 253, 253);
+    --font: font-family: 'Bitter', serif;
 }
 
 a {
@@ -25,7 +18,8 @@ a {
 button {
     border: none;
     background: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    letter-spacing: .2ch;
     color:  var(--dirty-white);
     text-transform: uppercase;
 }
@@ -33,11 +27,24 @@ button {
 .nav {
     display: flex;
     gap: 3rem;
-    padding: 2.5rem;
-    font-size: 1.5rem;
+    padding: 0 2.5rem 1rem;
+    font-size: 1rem;
     background-color: var(--black-gradient);
     width: 100vw;
     justify-content: center;
+}
+
+.header p {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    color: var(--dirty-white);
+    background-color: var(--black-gradient);
+    width: 100vw;
+
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 #content {
@@ -56,22 +63,31 @@ button {
 
 .main {
     /* make the main content take all the space available */
+    display: flex;
+    justify-content: center;
     flex-grow: 1; 
 
-    width: 100vw;
+    margin: 5rem;
+    width: 50vw;
+    background-color: var(--black-gradient);
 }
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 2.5rem;
+    padding: 1rem;
+
     background-color: var(--black-gradient);
     width: 100vw;
     color: var(--dirty-white);
     text-transform: uppercase;
-
-    
+   
 }
 
-
+.footer p {
+    font-size: .8rem;
+    letter-spacing: .3ch;
+    font-family: var(--font);
+    /* color: var(--dirty-white); */
+}

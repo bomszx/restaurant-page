@@ -1,13 +1,7 @@
-const content = document.getElementById('content')
-
 import './style.css';
-import { renderHeader } from './header';
-import { renderFooter} from './footer'
-import { renderMain } from './main';
+import {renderTemplate} from './template'
 
-
-
+// save your header footer on this file, then create functions that will append those files on their respective file ie header.js, footer.js
   
-  content.append(renderHeader());
-  content.append(renderMain())
-  content.append(renderFooter())
+renderTemplate();
+
