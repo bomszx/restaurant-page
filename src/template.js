@@ -1,3 +1,5 @@
+import mainContent from './mainContent.js'
+
 const header = () => {
     const headerElement = document.createElement('div')
 
@@ -26,7 +28,7 @@ const title = () => {
 
     const p = document.createElement('p')
 
-    p.innerText = 'Hapag Chup Chupaan'
+    p.innerText = `All Time Hapag Chupaan`
 
     titleElement.append(p)
 
@@ -53,8 +55,8 @@ const renderTemplate = () => {
 
     content.append(title())
     content.append(header())
+    content.append(mainContent())
     content.append(footer())
-
 }
 
-export {renderTemplate};
+export default renderTemplate
