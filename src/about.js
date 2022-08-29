@@ -1,5 +1,5 @@
-const about = () => {
+const renderAbout = () => {
     console.log('abouten')
 }
 
-export {about as renderAbout}
+export default renderAbout

@@ -1,5 +1,5 @@
-const menu = () => {
+const renderMenu = () => {
     console.log('menu')
 }
 
-export {menu as renderMenu}
+export default renderMenu

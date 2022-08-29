@@ -1,4 +1,5 @@
 import mainContent from './mainContent.js'
+import renderHome from './home.js'
 
 const header = () => {
     const headerElement = document.createElement('div')
@@ -55,7 +56,7 @@ const renderTemplate = () => {
 
     content.append(title())
     content.append(header())
-    content.append(mainContent())
+    content.append(renderHome())
     content.append(footer())
 }
 

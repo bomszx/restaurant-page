@@ -88,6 +88,7 @@ button {
 .footer p {
     font-size: .8rem;
     letter-spacing: .3ch;
-    font-family: var(--font);
-    /* color: var(--dirty-white); */
+    font-family: sans-serif;
+
+
 }
