@@ -42,7 +42,8 @@ const renderTemplate = () => {
     const content = document.getElementById('content')
     content.append(title())
     content.append(header())
-    content.append(renderAbout())
+    //create a setDefault page for the home page then create eventlisteneres to corresponding bottoms
+    content.append(renderHome())
     content.append(footer())
 }
 

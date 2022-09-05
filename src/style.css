@@ -8,6 +8,10 @@
     --dirty-white:#f1f0f0;
     --black-gradient: rgba(0, 0, 0, 0.6);
     --font: font-family: 'Bitter', serif;
+    --font-style: 'Montserrat Subrayada', sans-serif;
+    --biege: #e1c699;
+    --border: 2px;
+
 }
 
 a {
@@ -32,10 +36,12 @@ button {
     background-color: var(--black-gradient);
     width: 100vw;
     justify-content: center;
+
+    border-bottom: var(--border) solid var(--biege);
 }
 
 .header p {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: var(--font-style);
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -60,12 +66,25 @@ button {
     align-items: center;
 
 }
+.home p:first-child {
+    color: var(--biege);
+    font-family: 'Bitter', serif;
+    font-size: 3rem;
+}
 
-.main {
+.home p {
+    color: var(--dirty-white);
+    font-family: var(--font);
+    width: 20vw;
+}
+
+.home {
     /* make the main content take all the space available */
     display: flex;
     justify-content: center;
     flex-grow: 1; 
+    flex-direction: column;
+    align-items: center;
 
     width: 100vw;
     height: 100vh;
@@ -82,6 +101,7 @@ button {
     width: 100vw;
     color: var(--dirty-white);
     text-transform: uppercase;
+    border-top: 2px solid var(--biege);
    
 }
 
@@ -89,6 +109,4 @@ button {
     font-size: .8rem;
     letter-spacing: .3ch;
     font-family: sans-serif;
-
-
 }
