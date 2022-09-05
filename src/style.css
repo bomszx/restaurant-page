@@ -40,9 +40,11 @@ button {
     border-bottom: var(--border) solid var(--biege);
 }
 
+/* Nav Links */
+
 .header p {
     font-family: var(--font-style);
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     color: var(--dirty-white);
@@ -66,30 +68,61 @@ button {
     align-items: center;
 
 }
-.home p:first-child {
-    color: var(--biege);
-    font-family: 'Bitter', serif;
-    font-size: 3rem;
-}
 
-.home p {
-    color: var(--dirty-white);
-    font-family: var(--font);
-    width: 20vw;
-}
+/* Home Section */
 
 .home {
     /* make the main content take all the space available */
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-grow: 1; 
     flex-direction: column;
     align-items: center;
 
+
     width: 100vw;
     height: 100vh;
     background-color: var(--black-gradient);
+
+    gap: 1.5rem;
 }
+
+.menuBtn {
+    padding: 3rem;
+}
+
+.titleElement p {
+    font-family: 'Bitter', serif;
+    color: var(--biege);
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.pContainer {
+    display: flex;
+    justify-content: center;
+    color: var(--dirty-white);
+    letter-spacing: .1ch;
+    gap: 2rem;
+    margin: 1rem;
+    width: 30vw;
+    height: 30vh;
+}
+
+/* About Section */
+.aboutContainer {
+    display: flex;
+
+}
+.aboutP {
+    color: var(--biege);
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+
+}
+
+/* Footer Section */
 
 .footer {
     display: flex;
