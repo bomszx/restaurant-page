@@ -80,7 +80,6 @@ button {
     flex-direction: column;
     align-items: center;
 
-
     width: 100vw;
     height: 100vh;
     background-color: var(--black-gradient);
@@ -89,13 +88,13 @@ button {
 }
 
 .menuBtn {
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .titleElement p {
     font-family: 'Bitter', serif;
     color: var(--biege);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 500;
 }
 
@@ -103,11 +102,8 @@ button {
     display: flex;
     justify-content: center;
     color: var(--dirty-white);
-    letter-spacing: .1ch;
-    gap: 2rem;
-    margin: 1rem;
+    letter-spacing: .2ch;
     width: 30vw;
-    height: 30vh;
 }
 
 /* About Section */
