@@ -11,12 +11,16 @@ const header = () => {
     menu.innerText = 'Menu'
     const about = document.createElement('button')
     about.innerText = 'About'
+
+    // adding event listener doesn't seem to work
+    menu.addEventListener('click', (e) => console.log(e));
+
     headerElement.append(home)
     headerElement.append(menu)
     headerElement.append(about)
     headerElement.classList.add('nav')
 
-    // Add Event Listener to each button
+    // Add Event Listener to each button, we can only return one element from a function
     return headerElement
 }
 

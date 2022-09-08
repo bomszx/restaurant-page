@@ -6,7 +6,7 @@ const renderHome = () => {
     const p = document.createElement('p');
     const btnContainer = document.createElement('div')
     const menuBtn = document.createElement('button')
-
+    const hr = document.createElement('hr')
     title.innerText = `Kamusta?`
     menuBtn.innerText = `Click Me!`
 
@@ -17,6 +17,7 @@ const renderHome = () => {
     pContainer.append(p)
     
     element.append(titleContainer)
+    element.append(hr)
     element.append(pContainer)
 
     btnContainer.append(menuBtn)

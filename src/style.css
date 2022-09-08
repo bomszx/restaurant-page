@@ -98,6 +98,11 @@ button {
     font-weight: 500;
 }
 
+hr {
+    width: 250px;
+    border: 1px solid var(--biege);
+}
+
 .pContainer {
     display: flex;
     justify-content: center;
