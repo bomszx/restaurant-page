@@ -12,8 +12,8 @@ const header = () => {
     const about = document.createElement('button')
     about.innerText = 'About'
 
-    // adding event listener doesn't seem to work
-    menu.addEventListener('click', (e) => console.log(e));
+    // adding a function to the event doesn't seem to work?
+    menu.addEventListener('click', renderHome());
 
     headerElement.append(home)
     headerElement.append(menu)

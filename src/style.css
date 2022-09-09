@@ -109,6 +109,7 @@ hr {
     color: var(--dirty-white);
     letter-spacing: .2ch;
     width: 30vw;
+    text-align: center;
 }
 
 /* About Section */
@@ -119,8 +120,6 @@ hr {
 .aboutP {
     color: var(--biege);
     font-family: 'Bitter', serif;
-    font-size: 2rem;
-
 }
 
 /* Footer Section */
