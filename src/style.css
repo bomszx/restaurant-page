@@ -122,6 +122,14 @@ hr {
     font-family: 'Bitter', serif;
 }
 
+/* Menu Section */
+
+.menuSection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    height: 100%;
+}
+
 /* Footer Section */
 
 .footer {

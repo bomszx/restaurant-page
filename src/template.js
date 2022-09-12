@@ -49,7 +49,7 @@ const headElement = () => {
 
 const footerElement = () => {
     content.append(footer())
-}
+} 
 
 const renderMain = (e) => {
     if(e.target.innerText == 'HOME') {
@@ -86,7 +86,7 @@ const renderTemplate = () => {
     content.append(title())
     content.append(header())
     // the logic should be here, because we are appending the content of the webpage here
-    content.append(renderHome())
+    content.append(renderMenu())
     //create a setDefault page for the home page then create eventlisteneres to corresponding bottoms
     content.append(footer())
 }
