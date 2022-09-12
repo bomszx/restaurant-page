@@ -1,4 +1,4 @@
-import mainContent from './mainContent.js'
+import main from './mainContent.js'
 import renderHome from './home.js'
 import renderMenu from './menu.js'
 import renderAbout from './about.js'
@@ -42,13 +42,33 @@ const footer = () => {
     return footerElement
 }
 
+const renderMain = (e) => {
+    if(e.target.innerText == 'HOME') {
+        content.innerHTML = ''
+        // this caused our header nav and footer elements to disappear
+        content.append(renderHome())
+    } else {
+        console.log('Not Home')
+    }
+}
+
+// need to set Home as default before adding a click event
+// need to clear current mainContent contents before adding new
+
+const mainContent = () => {
+    document.addEventListener('click', (e) => {
+        console.log(e)
+    })   
+}
+
 const renderTemplate = () => {
     const content = document.getElementById('content')
     content.append(title())
     content.append(header())
-    //create a setDefault page for the home page then create eventlisteneres to corresponding bottoms
+    // the logic should be here, because we are appending the content of the webpage here
     content.append(renderHome())
+    //create a setDefault page for the home page then create eventlisteneres to corresponding bottoms
     content.append(footer())
 }
 
-export default renderTemplate
+export {renderTemplate, mainContent} 
