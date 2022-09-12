@@ -22,9 +22,18 @@ const menuArr = [
 const renderMenu = () => {
     const menuContainer = document.createElement('div')
     menuArr.forEach((menu) => {
-        const p = document.createElement('p');
-        p.innerText = `${menu.name}`
+        const pTitle = document.createElement('p');
+        const p = document.createElement('p')
+        const pPrice = document.createElement('p')
+
+        pTitle.innerText = `${menu.name}`
+        p.innerText = `${menu.description}`
+        pPrice.innerText = `${menu.price}`
+
+        menuContainer.classList.add('menuSection')
+        menuContainer.append(pTitle)
         menuContainer.append(p)
+        menuContainer.append(pPrice)
         
     })
     return menuContainer
