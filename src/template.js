@@ -57,7 +57,7 @@ const renderMain = (e) => {
         headElement()
         // this caused our header nav and footer elements to disappear
         content.append(renderHome())
-        footerElement
+        footerElement()
     } else if (e.target.innerText == 'MENU') {
         content.innerHTML = ''
         headElement()
