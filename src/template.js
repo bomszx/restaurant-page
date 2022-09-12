@@ -55,23 +55,19 @@ const renderMain = (e) => {
     if(e.target.innerText == 'HOME') {
         content.innerHTML = ''
         headElement()
-        // this caused our header nav and footer elements to disappear
         content.append(renderHome())
         footerElement()
-    } else if (e.target.innerText == 'MENU') {
+    } if (e.target.innerText == 'MENU') {
         content.innerHTML = ''
         headElement()
-        // this caused our header nav and footer elements to disappear
         content.append(renderMenu())
         footerElement()
-    } else if (e.target.innerText == 'ABOUT') {
+    } if (e.target.innerText == 'ABOUT') {
         content.innerHTML = ''
         headElement()
-        // this caused our header nav and footer elements to disappear
         content.append(renderAbout())
         footerElement()
-    
-    }
+    } 
 }
 
 // need to set Home as default before adding a click event
@@ -83,11 +79,10 @@ const mainContent = () => {
 
 const renderTemplate = () => {
     const content = document.getElementById('content')
+    mainContent()
     content.append(title())
     content.append(header())
-    // the logic should be here, because we are appending the content of the webpage here
     content.append(renderMenu())
-    //create a setDefault page for the home page then create eventlisteneres to corresponding bottoms
     content.append(footer())
 }
 

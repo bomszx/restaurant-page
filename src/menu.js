@@ -1,27 +1,34 @@
+const menuArr = [
+    {
+        name: `Sinigang na Baka with Banana`,
+        description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor iste a nisi, fuga id dicta tempora pariatur. Dolor, ut tempore doloremque vitae minima possimus harum nemo aperiam explicabo ipsam atque.`,
+        price: `4$`
+    },
+    {
+        name: `Crispy Tadyang (Beef)`,
+        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum deleniti itaque culpa saepe ea, dicta velit earum dolor. Iusto fugit repudiandae quibusdam possimus officia? Quasi nam reiciendis dicta dolorem!`,
+        price: `7$`
+    },
+    {
+        name: `Kare Kare with Ox Tail`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat labore tenetur eaque pariatur voluptatum unde! Repellendus officia voluptatibus ut perspiciatis quisquam dolor. Expedita ex eligendi ratione sint deleniti at dolore.`,
+        price: `5$`
+    },
+]
+
+// we should create the menu outright not when we click the menu button, so this function will create our html elements
+
+// then this function will append to our main content element
 const renderMenu = () => {
-    const element = document.createElement('div');
     const menuContainer = document.createElement('div')
-    const menuTitle = document.createElement('p')
-    const menuItem = document.createElement('p')
-    // const hr = document.createElement('hr')
-
-
-    menuTitle.innerText = `Sinigang na Baka with Banana`
-
-    menuItem.innerText = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum harum dolor ab necessitatibus officiis nobis adipisci cumque itaque commodi aliquid suscipit maxime ipsam ipsa id soluta accusantium, tenetur fuga quos.`
-
-    menuTitle.innerText = `Crispy Tadyang ng Dinosaur`
-
-    menuItem.innerText = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas sed debitis, officia porro nulla blanditiis, eveniet nobis, amet itaque quos provident impedit soluta possimus. Voluptate porro veniam odio optio unde?`
-
-    menuContainer.append(menuTitle)
-    menuContainer.append(menuItem)
-    element.append(menuContainer)
-    // element.append(hr)
-    element.classList.add('menuSection')
-
-    return element
-
+    menuArr.forEach((menu) => {
+        const p = document.createElement('p');
+        p.innerText = `${menu.name}`
+        menuContainer.append(p)
+        
+    })
+    return menuContainer
 }
+
 
 export default renderMenu
