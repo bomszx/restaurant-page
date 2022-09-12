@@ -42,13 +42,35 @@ const footer = () => {
     return footerElement
 }
 
+const headElement = () => {
+    content.append(title())
+    content.append(header())
+}
+
+const footerElement = () => {
+    content.append(footer())
+}
+
 const renderMain = (e) => {
     if(e.target.innerText == 'HOME') {
         content.innerHTML = ''
+        headElement()
         // this caused our header nav and footer elements to disappear
         content.append(renderHome())
-    } else {
-        console.log('Not Home')
+        footerElement
+    } else if (e.target.innerText == 'MENU') {
+        content.innerHTML = ''
+        headElement()
+        // this caused our header nav and footer elements to disappear
+        content.append(renderMenu())
+        footerElement()
+    } else if (e.target.innerText == 'ABOUT') {
+        content.innerHTML = ''
+        headElement()
+        // this caused our header nav and footer elements to disappear
+        content.append(renderAbout())
+        footerElement()
+    
     }
 }
 
@@ -56,9 +78,7 @@ const renderMain = (e) => {
 // need to clear current mainContent contents before adding new
 
 const mainContent = () => {
-    document.addEventListener('click', (e) => {
-        console.log(e)
-    })   
+    document.addEventListener('click', renderMain)   
 }
 
 const renderTemplate = () => {
@@ -71,4 +91,6 @@ const renderTemplate = () => {
     content.append(footer())
 }
 
-export {renderTemplate, mainContent} 
+
+export {renderTemplate, mainContent,}
+
