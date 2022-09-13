@@ -21,7 +21,9 @@ const menuArr = [
 // then this function will append to our main content element
 const renderMenu = () => {
     const menuContainer = document.createElement('div')
+    const menuItem = document.createElement('div')
     menuArr.forEach((menu) => {
+
         const pTitle = document.createElement('p');
         const p = document.createElement('p')
         const pPrice = document.createElement('p')
@@ -31,9 +33,10 @@ const renderMenu = () => {
         pPrice.innerText = `${menu.price}`
 
         menuContainer.classList.add('menuSection')
-        menuContainer.append(pTitle)
-        menuContainer.append(p)
-        menuContainer.append(pPrice)
+        menuItem.append(pTitle)
+        menuItem.append(p)
+        menuItem.append(pPrice)
+        menuContainer.append(menuItem)
         
     })
     return menuContainer
