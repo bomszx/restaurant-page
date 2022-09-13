@@ -20,26 +20,32 @@ const menuArr = [
 
 // then this function will append to our main content element
 const renderMenu = () => {
-    const menuContainer = document.createElement('div')
-    const menuItem = document.createElement('div')
+    const menuContainer = document.createElement('div');
+
     menuArr.forEach((menu) => {
 
         const pTitle = document.createElement('p');
-        const p = document.createElement('p')
-        const pPrice = document.createElement('p')
+        const menuItem = document.createElement('div');
+        const p = document.createElement('p');
+        const pPrice = document.createElement('p');
+        const hr = document.createElement('hr');
 
-        pTitle.innerText = `${menu.name}`
-        p.innerText = `${menu.description}`
-        pPrice.innerText = `${menu.price}`
+        pTitle.classList.add('pTitle')
+        menuContainer.classList.add('menuSection');
+        menuItem.classList.add('menuItem')
 
-        menuContainer.classList.add('menuSection')
+        pTitle.innerText = `${menu.name}`;
+        p.innerText = `${menu.description}`;
+        pPrice.innerText = `${menu.price}`;
+
         menuItem.append(pTitle)
-        menuItem.append(p)
-        menuItem.append(pPrice)
-        menuContainer.append(menuItem)
-        
+        menuItem.append(hr);
+        menuItem.append(p);
+        menuItem.append(pPrice);
+        menuContainer.append(menuItem);               
     })
-    return menuContainer
+    return menuContainer  
+
 }
 
 
