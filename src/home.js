@@ -1,3 +1,5 @@
+import renderMenu from "./menu";
+
 const renderHome = () => {
     const element = document.createElement('div');
     const titleContainer = document.createElement('div')
@@ -28,7 +30,6 @@ const renderHome = () => {
     pContainer.classList.add('pContainer')
     element.classList.add('home')
     menuBtn.classList.add('menuBtn')
-
     return element
 }
 

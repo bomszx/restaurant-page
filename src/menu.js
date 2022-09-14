@@ -23,7 +23,6 @@ const renderMenu = () => {
     const menuContainer = document.createElement('div');
 
     menuArr.forEach((menu) => {
-
         const pTitle = document.createElement('p');
         const menuItem = document.createElement('div');
         const p = document.createElement('p');
@@ -31,6 +30,7 @@ const renderMenu = () => {
         const hr = document.createElement('hr');
 
         pTitle.classList.add('pTitle')
+        pPrice.classList.add('pPrice')
         menuContainer.classList.add('menuSection');
         menuItem.classList.add('menuItem')
 
@@ -41,12 +41,12 @@ const renderMenu = () => {
         menuItem.append(pTitle)
         menuItem.append(hr);
         menuItem.append(p);
+
         menuItem.append(pPrice);
         menuContainer.append(menuItem);               
     })
     return menuContainer  
 
 }
-
 
 export default renderMenu

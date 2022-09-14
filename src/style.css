@@ -14,6 +14,13 @@
 
 }
 
+body {
+    background-size: cover;
+    background-image: url(./images/food-front.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+}
+
 a {
     text-decoration: none;
     text-transform: capitalize;
@@ -58,11 +65,6 @@ button {
 #content {
     height: 100vh;
     width: 100vw;
-    background-size: cover;
-    background-image: url(./images/food-front.jpg);
-    background-attachment: fixed;
-    background-position: center center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,14 +123,17 @@ hr {
 .aboutP {
     color: var(--biege);
     font-family: 'Bitter', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 /* Menu Section */
 
 .menuSection {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    height: 100vh;
+    width: 100vw;
     background-color: var(--black-gradient);
     color: var(--dirty-white);
     align-items: center;
@@ -136,14 +141,20 @@ hr {
 
     padding: 10rem;
     grid-gap: 3rem;
-
-    
 }
 
 .pTitle {
     font-family: 'Bitter', serif;
     color: var(--biege);
     font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.pPrice {
+    font-family: 'Bitter', serif;
+    color: var(--biege);
+    font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
 }

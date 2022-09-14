@@ -57,7 +57,7 @@ const renderMain = (e) => {
         headElement()
         content.append(renderHome())
         footerElement()
-    } if (e.target.innerText == 'MENU') {
+    } if (e.target.innerText == 'MENU' || e.target.innerText == 'CLICK ME!') {
         content.innerHTML = ''
         headElement()
         content.append(renderMenu())
@@ -82,7 +82,7 @@ const renderTemplate = () => {
     mainContent()
     content.append(title())
     content.append(header())
-    content.append(renderMenu())
+    content.append(renderHome())
     content.append(footer())
 }
 
